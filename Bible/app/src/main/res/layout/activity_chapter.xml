@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ChapterActivity">
+
+    <TextView
+        android:id="@+id/tvChapter"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Chapter"
+        android:gravity="left|center"
+        android:paddingLeft="20dp"
+        android:background="@color/secondary"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/chapterInput"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_marginVertical="10dp"
+        android:background="@drawable/custome_et"
+        android:hint="Chapter Number"
+        android:padding="10dp"
+        android:inputType="number"
+        android:layout_margin="20dp"
+        android:textColor="@color/black"
+        android:layout_below="@+id/tvChapter"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/chapterInput"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnBackChapter"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/secondary"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            app:cornerRadius="20dp"/>
+
+        <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnChapter"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/secondary"
+        android:text="Search"
+            android:textColor="@color/white"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"/>
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingchapter"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading" />
+
+</RelativeLayout>
